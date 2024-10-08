@@ -1,0 +1,27 @@
+<! DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Hello!</title>
+		
+	</head>
+	<body>
+		<button onclick="getData()">
+			Click me
+		</button>
+		<br>
+		<input id="nameIn">
+		<input id="ageIn">
+		<br/>
+		<br/>
+		<input id="outBox" readonly>
+		</body>
+		<script>
+		function getData(){
+		//js code goes here
+			var name=document.getElementById("nameIn").value;
+			document.getElementById("outBox").value=name;
+			alert(name);
+		}
+		</script>
+</html>
