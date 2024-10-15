@@ -1,0 +1,35 @@
+<! DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Hello!</title>
+		
+	</head>
+	<body>
+	<h3>
+		Provisional license eligibility check
+	</h3>
+	<input id="nameIn" placeholder="Name">
+	<input id="ageIn" placeholder="Age">
+	<br/>
+	<button onclick="checkEligible()"> CLick me
+	</button>
+	<h4>
+		Eligible: <a id="outEligible"> ---
+		</a>
+	</h4>
+
+		<script>
+		function checkEligible(){
+			var age=document.getElementById("ageIn").value;
+			age=parseInt(age);
+			if (age>=17){
+				document.getElementById("outEligible").innerHTML="Yes";
+			}
+			else{
+			document.getElementById("outEligible").innerHTML="No";
+			}
+		}
+		</script>
+	</body>
+</html>

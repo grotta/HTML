@@ -1,0 +1,66 @@
+<!-- function calcAverage(){
+	var sum=0;
+	for(var index=0; index<myAges.length; index+=1){
+		sum+=parseInt (myAges[index]);
+		}
+	var average=sum / myAges.length;
+	outAvg.innerHTML = averages;
+	}
+ -->
+ <!DOCTYPE html>
+<! pg 240 populating table>
+<html>
+  <head>
+   
+  </head>
+  <body>
+    <input id="nameIn" placeholder="Name">
+    <input id="ageIn" placeholder="Age">
+    <button onclick="addData()">
+        Add data to list
+    </button>
+    <br\>
+    <h4> Average Age: <a id="avgDisplay">---</a>
+    </h4>
+    Output:
+    <br\>
+    <table id="outDisplay" border>
+        <tr>
+            <th> Name </th><th>Age</th>
+        </tr>
+    </table>
+       
+  </body>
+</html>
+<script>
+var myNames =[];
+var myAges = [];
+var nameEle=document.getElementById("nameIn");
+var ageEle=document.getElementById("ageIn");
+var outEle=document.getElementById("outDisplay");
+var outAvg=document.getElementById("avgDisplay");
+
+function addData(){
+// create variable called var to store result from user input
+    myNames.push(nameEle.value);
+    myAges.push(ageEle.value);
+    displayData();
+    }
+function displayData(){
+    outEle.innerHTML=
+    "<tr><th>Name</th><th>Age</th></tr>";
+    for (var index=0; index<myNames.length; index+=1){
+        outEle.innerHTML += "<tr>"+ "<td>"+myNames[index]+"</td>"+
+        "<td>"+myAges[index]+"</td>"+"</tr>";
+        }
+    calcAverage();
+    }
+function calcAverage(){
+    var sum=0;
+    for(var index=0; index<myAges.length; index+=1){
+        sum+=parseInt(myAges[index]);
+        }
+    var average=sum / myAges.length;
+    outAvg.innerHTML=average;
+    }
+</script>
